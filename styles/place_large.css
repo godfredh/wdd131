@@ -1,0 +1,45 @@
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    main {
+        position: relative;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 0px 15px var(--black);
+    }
+
+    .card h2 {
+        margin: .5rem 0 .5rem -.5rem;
+        background-color: var(--ocean);
+        color: white;
+        width: 90%;
+        text-align: left;
+        box-shadow: 0px 0px 8px var(--black);
+    }
+    
+    .info {
+        position: absolute;
+        top: 2rem;
+        left: 1rem;
+      }
+
+    .weather {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    }
+
+    #weather-icon {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: "⛅";
+        position: absolute;
+        right: 3rem;
+        top: 1.5rem;
+      }
+}

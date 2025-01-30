@@ -1,0 +1,167 @@
+:root {
+    --ocean:  #0a257c;
+    --red: #9b0029;
+    --old-white: #faebd7;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--red);
+}
+
+h1, h2 {
+    grid-template: auto 1fr auto / 1fr auto;
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    text-align: center;
+    background-color:var(--red);
+    border-bottom: 1rem solid var(--ocean);
+}
+
+h1 {
+    color: var(--white);
+    padding: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.info, .weather {
+  text-align: center;
+}
+
+.card {
+    background-color: var(--white);
+}
+
+.card h2 {
+    padding: 1rem;
+}
+
+.dta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.label {
+    text-align: right;
+}
+
+.value {
+    text-align: left;
+}
+
+.weather img {
+    width: 100px;
+    height: auto;
+}
+
+/*FOOTER*/
+footer {
+    background-color: var(--red);
+    text-align: center;
+    padding: 1rem;
+    color: var(--white);
+}:root {
+    --ocean: #0a257c;
+    --red: #9b0029;
+    --old-white: #faebd7;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--red);
+}
+
+h1, h2 {
+    grid-template: auto 1fr auto / 1fr auto;
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    text-align: center;
+    background-color:var(--red);
+    border-bottom: 1rem solid var(--ocean);
+}
+
+h1 {
+    color: var(--white);
+    padding: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.info, .weather {
+  text-align: center;
+}
+
+.card {
+    background-color: var(--white);
+}
+
+.card h2 {
+    padding: 1rem;
+}
+
+.dta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.label {
+    text-align: right;
+}
+
+.value {
+    text-align: left;
+}
+
+.weather img {
+    width: 100px;
+    height: auto;
+}
+
+/*FOOTER*/
+footer {
+    background-color: var(--red);
+    text-align: center;
+    padding: 1rem;
+    color: var(--white);
+}

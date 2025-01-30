@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places Activity wDD 131</title>
+    <meta name="description" content="Place page activity - Mensah Godfred - WDD131">
+    <meta name="author" content=" Mensah Godfred">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <script src="scripts/gerWindChill.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Norway</h1>
+    </header>
+    <main>
+        <picture>
+            <source media="(min-width: 950px)" srcset="images/Norway-large.webp">
+            <img src="images/Norway-small.webp" alt="Norway landscape" width="300" height="450">
+        </picture>
+        <section class="card info">
+            <h2>Data</h2>
+            <div class="dta-grid">
+                <span class="label">Area:</span>
+                <span class="value">385,207 km²</span>
+                
+                <span class="label">Population:</span>
+                <span class="value">Approximately 5.52 million (2023)</span>
+                
+                <span class="label">Capital:</span>
+                <span class="value">Oslo</span>
+                
+                <span class="label">Languages:</span>
+                <span class="value">Norwegian, Sami</span>
+                
+                <span class="label">Currency:</span>
+                <span class="value">Norwegian Krone (NOK)</span>
+
+                <span class="label">Time Zone:</span>
+                <span class="value">UTC+1 (CET)</span>
+
+                <span class="label">Calling Code:</span>
+                <span class="value">+47</span>
+
+                <span class="label">Internet TLD:</span>
+                <span class="value">.no</span>
+            </div>
+        </section>
+        <section class="card weather">
+            <h2>Weather</h2>
+            <img src="images/small-weather-icon.svg" alt="Weather Icon" width="100" height="100" id="weather-icon">
+            <div class="dta-grid">
+                <span class="label">Temperature:</span>
+                <span class="value">10 C°</span>
+
+                <span class="label">Conditions:</span>
+                <span class="value">Partly Cloudy</span>
+
+                <span class="label">Wind:</span>
+                <span class="value">7 km/h</span>
+
+                <span class="label">Wind Chill:</span>
+                <span class="value" id="windChill"></span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="year"></span> | Mensah Godfred | Ghana</p>
+        <span id="lastModified"></span>
+    </footer>
+    </footer>
+</body>
+</html>
