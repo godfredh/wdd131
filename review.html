@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Counter</title>
+    <meta name="description" content="This is a counter for form submission page">
+    <meta name="author" content="Mensah Godfred">
+    <script src="scripts/getdates.js" defer></script>
+    <script defer src="scripts/form.js"></script>
+</head>
+<body id="counter-body">
+    <h1>Form Submission Counter</h1>
+    
+    <div id="counter-display">
+        <p>Total Reviews Submitted: <span id="review-count">0</span></p>
+    </div>
+    
+    <div id="thank-you-message" style="display: none;">
+        <p>Thank you for your submission!</p>
+        <a href="index.html">Go back to the form page</a>
+    </div>
+
+    <script>
+        // Display the current review count from localStorage
+        const reviewCount = localStorage.getItem("reviewcounter") || 0;
+        document.getElementById("review-count").innerText = reviewCount;
+
+        // Update the review counter and show a thank-you message after form submission
+        const form = document.createElement("form");
+        form.setAttribute("id", "reviewform");
+        
+        const submitButton = document.createElement("button");
+        submitButton.innerText = "Submit Review";
+        form.appendChild(submitButton);
+
+        document.body.appendChild(form);
+        
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();  // Prevent page refresh
+            let currentCounter = parseInt(localStorage.getItem("reviewcounter") || "0", 10);
+            currentCounter += 1;
+            localStorage.setItem("reviewcounter", currentCounter);
+
+            // Show thank you message and hide the form
+            document.getElementById("review-count").innerText = currentCounter;
+            form.style.display = "none";
+            document.getElementById("thank-you-message").style.display = "block";
+        });
+    </script>
+</body>
+</html>

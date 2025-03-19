@@ -1,51 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album</title>
-    <meta name="description" content="A WDD website showing temple pictures">
-    <meta name="author" content="Marvin Baliraine">
+    <meta name="description" content="WDD 131 - Enhance Picture Album Web Fundamentals - Mensah Godfred - Temples">
+    <meta name="author" content="Ebenezer Gasonoo">
+    <title>WDD 131 - Dynamic Web Fundamentals - Jose Diaz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/filtered-temples.css">
-    <link rel="stylesheet" href="styles/filtered-temples-small.css">
-    <script src="scripts/filtered-temples.js"defer></script>
-    
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
 </head>
+
 <body>
     <header>
-        <div class="navbar">
-            <div class="logo">
-                <h1>Temple Album</h1>
-            </div>
-            <nav>
-                <ul id="nav-links">
-                    <li><a href="temple.html">Home</a></li>
-                    <li><a href="filtered-temples.html" data-filter="old">Old</a></li>
-                    <li><a href="filtered-temples.html" data-filter="new">New</a></li>
-                    <li><a href="filtered-temples.html" data-filter="large">Large</a></li>
-                    <li><a href="filtered-temples.html" data-filter="small">Small</a></li>
-                </ul>
-            </nav>
-            <div class="hamburger" id="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </div>
+        <h1>Temple Album</h1>
+        <button id="menu"></button>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <main id="main-content">
-        <h2>Home</h2>
-        <div id="res-grid" class="res-grid"></div>
+    <main>
+        <section class="card">
+            <h2>Home</h2>
+            <div id="temples" class="temples"></div>
+        </section>
     </main>
     <footer>
-        <p>&copy;<span id="year"></span> - Mensah Godfred - Ghana</p>
-        <span id="lastModified"></span>
-        <script src="scripts/getdates.js" defer></script>
+        <p>©<span id="year"></span> Mensah Godfred, Tema, Ghana</p>
+        <p id="lastmodified">Last Modified: </p>
     </footer>
 </body>
-
 </html>

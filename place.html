@@ -1,81 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Places Activity wDD 131</title>
-    <meta name="description" content="Place page activity - Mensah Godfred - WDD131">
-    <meta name="author" content=" Mensah Godfred">
+    <title>Country and Place</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Mensah Godfred. Exploring web development fundamentals with dynamic and engaging projects.">
+    <meta name="author" content="Mensah Godfred">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <script src="scripts/gerWindChill.js" defer></script>
-    <script src="scripts/getdates.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Norway</h1>
+        <h1>Popular Cash Crop in Ghana</h1>
     </header>
     <main>
-        <picture>
-            <source media="(min-width: 950px)" srcset="images/Norway-large.webp">
-            <img src="images/Norway-small.webp" alt="Norway landscape" width="300" height="450">
-        </picture>
-        <section class="card info">
+            <picture>
+                <source srcset="images/farms-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/farms-medium.webp" media="(min-width: 800px)">
+                <img src="images/farms-small.webp" alt="Ghanaian Cocoa farms">
+            </picture>
+        <section class="data">
             <h2>Data</h2>
-            <div class="dta-grid">
-                <span class="label">Area:</span>
-                <span class="value">385,207 km²</span>
-                
-                <span class="label">Population:</span>
-                <span class="value">Approximately 5.52 million (2023)</span>
-                
-                <span class="label">Capital:</span>
-                <span class="value">Oslo</span>
-                
-                <span class="label">Languages:</span>
-                <span class="value">Norwegian, Sami</span>
-                
-                <span class="label">Currency:</span>
-                <span class="value">Norwegian Krone (NOK)</span>
-
-                <span class="label">Time Zone:</span>
-                <span class="value">UTC+1 (CET)</span>
-
-                <span class="label">Calling Code:</span>
-                <span class="value">+47</span>
-
-                <span class="label">Internet TLD:</span>
-                <span class="value">.no</span>
-            </div>
+            <ul>
+                <li><b>Area:</b> 238,533 sq km</li>
+                <li><b>Population:</b> 34,120,000</li>
+                <li><b>Capital:</b> Accra</li>
+                <li><b>Languges:</b> Twi,English,Ga,Ghana,Hausa</li>
+                <li><b>Currency:</b> Ghana Cedis(GHS)</li>
+                <li><b>Time Zone:</b> GMT+00</li>
+                <li><b>Calling Code:</b> +233</li>
+                <li><b>Internet TLD:</b> .gh</li>
+            </ul>
         </section>
-        <section class="card weather">
+        <section class="weather">
             <h2>Weather</h2>
-            <img src="images/small-weather-icon.svg" alt="Weather Icon" width="100" height="100" id="weather-icon">
-            <div class="dta-grid">
-                <span class="label">Temperature:</span>
-                <span class="value">10 C°</span>
-
-                <span class="label">Conditions:</span>
-                <span class="value">Partly Cloudy</span>
-
-                <span class="label">Wind:</span>
-                <span class="value">7 km/h</span>
-
-                <span class="label">Wind Chill:</span>
-                <span class="value" id="windChill"></span>
-            </div>
+            <img id="svg" src="images/sunny.svg" alt="Weather Icon" class="weather-icon">
+            <p>Temperature: <span id="temperature">10°C</span></p>
+            <p>Wind Speed: <span id="windSpeed">5 km/h</span></p>
+            <p>Wind Chill: <span id="windChill">N/A </span></p>
         </section>
     </main>
     <footer>
-        <p>&copy;<span id="year"></span> | Mensah Godfred | Ghana</p>
-        <span id="lastModified"></span>
-    </footer>
+        <p>© <span id="currentyear"></span> Mensah Godfred, Tema, Ghana</p>
+        <p>Last Modified: <span id="lastModified"></span> </p>
     </footer>
 </body>
 </html>
