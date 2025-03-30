@@ -1,18 +1,21 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const hamButton = document.querySelector('#menu');
+    const navigation = document.querySelector('.navigation');
+    const nameHeader = document.querySelector('.nameHeader'); // Select the h1 element
 
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-        
-
-document.getElementById("lastModified").textContent = document.lastModified;
-
-
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('nav ul');
-
-
-hamburger.addEventListener('click', () => {
-    menu.classList.toggle('visible');  
-    if (menu.classList.contains('visible')) {
-        hamburger.innerHTML = 'X';  
-        hamburger.innerHTML = '&#9776;';  
-    }
+    hamButton.addEventListener('click', () => {
+        navigation.classList.toggle('open');
+        hamButton.classList.toggle('open');
+        nameHeader.classList.toggle('hidden'); // Toggle the 'hidden' class
+    });
 });
+
+
+
+// Footer information
+const currentYear = new Date().getFullYear();
+const lastModified = document.lastModified;
+const copyrightYearElement = document.getElementById('currentyear');
+const lastModifiedElement = document.getElementById('lastModified');
+copyrightYearElement.textContent = currentYear;
+lastModifiedElement.textContent = `Last update: ${lastModified}`;

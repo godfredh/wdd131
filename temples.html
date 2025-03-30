@@ -1,78 +1,87 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temples Album</title>
-    <meta name="description" content="Picture Album WDD 131 Dynamic Web Fundamentals Mensah Godfred">
-    <meta name="author" content="Mensah Godfred">
+    <title>Temple Album</title>
+    <meta name="description" content="Temple Album">
+    <meta name="keywords" content="Temple Album, Ghana Temple">
+    <meta name="author" content="Mensah Godfred"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
     <script src="scripts/temples.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <h1>Temple Album</h1>
-        <nav>
-            <button class="hamburger">&#9776;</button>
-            <button class="close">&times;</button>
-          <ul class="hidden">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Old</a></li>
-            <li><a href="#">New</a></li>
-            <li><a href="#">Large</a></li>
-            <li><a href="#">Small</a></li>
-          </ul>
+    <header>
+        <h1 class="nameHeader">Temple Album</h1>
+        <button id="menu"></button>
+        <nav class="navigation">
+            <a class="active" href="">Home</a>
+            <a href="">Old</a>
+            <a href="">New</a>
+            <a href="">Large</a>
+            <a href="">Small</a>
         </nav>
     </header>
     <main>
-        <h2>Home</h2>
-        <section class="album-grid">
-            <figure>
-                <img src="images/temple2.jpg" alt="Salt Lake Temple">
-                <figcaption>Accra Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple2.jpg" alt="Accra Temple">
-                <figcaption>Accra Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple2.jpg" alt="Washington D.C. Temple">
-                <figcaption>Accra Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple2.jpg" alt="Berkeley California Temple">
-                <figcaption>Accra Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple2.jpg" alt="Salt Lake City Temple">
-                <figcaption>Accra Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple2.jpg" alt="San Diego California Temple">
-                <figcaption>Accra Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple2.jpg" alt="Provo Utah Temple">
-                <figcaption>Accra Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple2.jpg" alt="Houston Texas Temple">
-                <figcaption>Accra Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple2.jpg" alt="Salt Lake City Temple">
-                <figcaption>Accra Temple</figcaption>
-            </figure>
-        </section>
+        <h2 class="home">Home</h2>
+        <div class="container home">
+        <figure>
+			<img class="img-temple" src="https://www.churchofjesuschrist.org/imgs/7cf8e8b9e5a5a1f379d4e2c9bc2166f9c6007aca/full/640%2C/0/default" loading="lazy" width="250" height="167">
+			<figcaption>Accra Ghana Temple
+</figcaption>
+		</figure>
+        <figure>
+			<img class="img-temple" src="https://www.churchofjesuschrist.org/imgs/7cf8e8b9e5a5a1f379d4e2c9bc2166f9c6007aca/full/640%2C/0/default" loading="lazy" width="250" height="167">
+			<figcaption>Accra Ghana Temple
+</figcaption>
+		</figure>
+        <figure>
+			<img class="img-temple" src="https://www.churchofjesuschrist.org/imgs/7cf8e8b9e5a5a1f379d4e2c9bc2166f9c6007aca/full/640%2C/0/default" loading="lazy" width="250" height="167">
+			<figcaption>Accra Ghana Temple
+</figcaption>
+		</figure>
+        <figure>
+			<img class="img-temple" src="https://www.churchofjesuschrist.org/imgs/7cf8e8b9e5a5a1f379d4e2c9bc2166f9c6007aca/full/640%2C/0/default" loading="lazy" width="250" height="167">
+			<figcaption>Accra Ghana Temple
+</figcaption>
+		</figure>
+        <figure>
+			<img class="img-temple" src="https://www.churchofjesuschrist.org/imgs/7cf8e8b9e5a5a1f379d4e2c9bc2166f9c6007aca/full/640%2C/0/default" loading="lazy" width="250" height="167">
+			<figcaption>Accra Ghana Temple
+</figcaption>
+		</figure>
+        <figure>
+			<img class="img-temple" src="https://www.churchofjesuschrist.org/imgs/7cf8e8b9e5a5a1f379d4e2c9bc2166f9c6007aca/full/640%2C/0/default" loading="lazy" width="250" height="167">
+			<figcaption>Accra Ghana Temple
+</figcaption>
+		</figure>
+        <figure>
+			<img class="img-temple" src="https://www.churchofjesuschrist.org/imgs/7cf8e8b9e5a5a1f379d4e2c9bc2166f9c6007aca/full/640%2C/0/default" loading="lazy" width="250" height="167">
+			<figcaption>Accra Ghana Temple
+</figcaption>
+		</figure>
+        <figure>
+			<img class="img-temple" src="https://www.churchofjesuschrist.org/imgs/7cf8e8b9e5a5a1f379d4e2c9bc2166f9c6007aca/full/640%2C/0/default" loading="lazy" width="250" height="167">
+			<figcaption>Accra Ghana Temple
+</figcaption>
+		</figure>
+        <figure>
+			<img class="img-temple" src="https://www.churchofjesuschrist.org/imgs/7cf8e8b9e5a5a1f379d4e2c9bc2166f9c6007aca/full/640%2C/0/default" loading="lazy" width="250" height="167">
+			<figcaption>Accra Ghana Temple
+</figcaption>
+		</figure>
+    </div>
     </main>
     <footer>
-        <p>© <span id="currentyear"></span> Mensah Godfred, Tema, Ghana</p>
-        <p>Last Modified: <span id="lastModified"></span> </p>
+        <p>
+            &copy;<span id="currentyear">year </span> - Mensah Godfred
+        </p>
+        <p id="lastModified">Whereas ipsum dolor, sit amet consectetur </p>
     </footer>
+
 </body>
 </html>
-

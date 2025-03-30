@@ -1,30 +1,27 @@
-const hamButton = document.getElementById("menu");
-const nav = document.querySelector(".navigation");
-const year = document.getElementById("year");
-const lastModified = document.getElementById("lastModified");
-const today = new Date();
-const lastModifiedDate = new Date(document.lastModified);
-year.innerHTML = `${today.getFullYear()}`;
-lastModified.innerHTML = `Last Modified On: ${lastModifiedDate}`;
-lastModified.style.color = "white";
 
-const templesElement = document.querySelector(".grid");
-const home = document.querySelector("#home");
-const old = document.querySelector("#old");
-const news = document.querySelector("#new");
-const large = document.querySelector("#large");
-const small = document.querySelector("#small");
+// Header hambuger button secction
+document.addEventListener('DOMContentLoaded', () => {
+    const hamButton = document.querySelector('#menu');
+    const navigation = document.querySelector('.navigation');
+    const nameHeader = document.querySelector('.nameHeader');
 
-const listFilters = [home, old, news, large, small];
+    hamButton.addEventListener('click', () => {
+        navigation.classList.toggle('open');
+        hamButton.classList.toggle('open');
+        nameHeader.classList.toggle('hidden');
+    });
+});
 
 const temples = [
     {
-        templeName: "Accra Ghana Temple",
-        location: "Accra, Ghana",
-        dedicated: "2001, November, 11",
-        area: "17,500 sq ft",
+        templeName: "Aba Nigeria",
+        location: "Aba, Nigeria",
+        dedicated: "2005, August, 7",
+        area: 11500,
         imageUrl:
-            "https://www.churchofjesuschrist.org/imgs/7cf8e8b9e5a5a1f379d4e2c9bc2166f9c6007aca/full/640%2C/0/default",
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg",
+        width: "400px",
+        height: "250px"
     },
     {
         templeName: "Manti Utah",
@@ -33,6 +30,8 @@ const temples = [
         area: 74792,
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg",
+        width: "400px",
+        height: "250px"
     },
     {
         templeName: "Payson Utah",
@@ -41,6 +40,8 @@ const temples = [
         area: 96630,
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg",
+        width: "400px",
+        height: "225px"
     },
     {
         templeName: "Yigo Guam",
@@ -49,6 +50,8 @@ const temples = [
         area: 6861,
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg",
+        width: "400px",
+        height: "250px"
     },
     {
         templeName: "Washington D.C.",
@@ -57,6 +60,8 @@ const temples = [
         area: 156558,
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg",
+        width: "400px",
+        height: "250px"
     },
     {
         templeName: "Lima Perú",
@@ -65,6 +70,8 @@ const temples = [
         area: 9600,
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg",
+        width: "400px",
+        height: "250px"
     },
     {
         templeName: "Mexico City Mexico",
@@ -73,137 +80,112 @@ const temples = [
         area: 116642,
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
+        width: "400px",
+        height: "250px"
     },
     // Add more temple objects here...
     {
-        templeName: "Durban South Africa",
-        location: "Umhlanga, South Africa",
-        dedicated: "2020, February, 16",
-        area: 19860,
-        alternate: "Durban South Africa",
+        templeName: "Panamá City Panamá",
+        location: "Ancon, Panamá, Panama",
+        dedicated: "2008, August, 10",
+        area: 18943,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/durban-south-africa/400x250/5-a34bb1899983ed73e499a18da741b3704e1d4d35.jpg"
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/panama-city-panama/400x250/panama-city-temple-lds-569186-wallpaper.jpg",
+        width: "400px",
+        height: "250px"
     },
     {
-        templeName: "Copenhagen Denmark",
-        location: "Frederiksberg, Denmark",
-        dedicated: "2004, May, 23",
-        area: 25000,
-        alternate: "Copenhagen Denmark Temple",
+        templeName: "Fukuoka Japan",
+        location: "Fukuoka-shi, Fukuoka, Japan",
+        dedicated: "2000, June, 11",
+        area: 10700,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/copenhagen-denmark/400x250/copenhagen-denmark-temple-lds-278232-wallpaper.jpg"
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/fukuoka-japan/400x250/fukuoka-japan-temple-lds-306863-wallpaper.jpg",
+        width: "400px",
+        height: "250px"
     },
     {
-        templeName: "Asunción Paraguay",
-        location: "Asunción, Paraguay",
-        dedicated: "2002, May, 19",
-        area: 11906,
-        alternate: "Asunción Paraguay Temple",
+        templeName: "Helsinki Finland",
+        location: "Espoo, Uusimaa, Finland",
+        dedicated: "2006, February, 27",
+        area: 16350,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/asuncion-paraguay/400x250/2-5b20486ae3876279c35be147ef9e63aec256a459.jpeg"
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/helsinki-finland/400x225/helsinki-finland-temple-lds-354498-wallpaper.jpg",
+        width: "400px",
+        height: "225px"
     },
-    {
-        templeName: "Guatemala City",
-        location: "Guatemala City, Guatemala",
-        dedicated: "1984, December, 14",
-        area: 17609,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/guatemala-city-guatemala/800x1280/guatemala-lds-temple-82739-wallpaper.jpg",
-    },
-    {
-        templeName: "Quetzaltenango Guatemala",
-        location: "Quetzaltenango Guatemala",
-        dedicated: "2011, December, 11",
-        area: 21086,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/quetzaltenango-guatemala/800x500/quetzaltenango-guatemala-temple-lds-893073-wallpaper.jpg",
-    },
+
 ];
 
-/* Declare and initialize global variables */
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.container.home');
+    const navLinks = document.querySelectorAll('.navigation a');
+    const titleName = document.querySelector('.title');
 
-displayTemples(temples);
+    const displayTemples = (filteredTemples) => {
+        container.innerHTML = '';
+        filteredTemples.forEach(temple => {
+            const card = document.createElement('div');
+            card.className = 'temple-card';
+            card.innerHTML = `
+                <img src="${temple.imageUrl}"  loading="lazy"  width="${temple.width}" height="${temple.height}" alt="${temple.templeName} Temple">
+                <div class="temple-info">
+                    <h2>${temple.templeName}</h2>
+                    <p><strong>Location:</strong> ${temple.location}</p>
+                    <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+                    <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    };
 
-const resetOpts = () =>
-    listFilters.forEach((element) => {
-        if (element.getAttribute("class") === "active") {
-            element.classList.toggle("active");
+    const filterTemples = (criteria) => {
+        let filteredTemples = temples;
+        switch (criteria) {
+            case 'old':
+                filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+                titleName.innerHTML = 'Old Temples';
+                break;
+            case 'new':
+                filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+                titleName.innerHTML = 'New Temples';
+                break;
+            case 'large':
+                filteredTemples = temples.filter(temple => temple.area > 90000);
+                titleName.innerHTML = 'Large Temples';
+                break;
+            case 'small':
+                filteredTemples = temples.filter(temple => temple.area < 10000);
+                titleName.innerHTML = 'Small Temples';
+                break;
+            default:
+                filteredTemples = temples;
+                titleName.innerHTML = 'All Temples';
+                break;
         }
+        displayTemples(filteredTemples);
+    };
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            navLinks.forEach(nav => nav.classList.remove('active'));
+            e.target.classList.add('active');
+            filterTemples(e.target.id);
+        });
     });
 
-// Event Listeners
-hamButton.addEventListener("click", function () {
-    nav.classList.toggle("open");
-    hamButton.classList.toggle("open");
+    filterTemples('home-nav');
 });
 
-home.addEventListener("click", () => {
-    resetOpts();
-    home.classList.toggle("active");
-    let filterTemples = temples;
-    displayTemples(filterTemples);
-});
-old.addEventListener("click", () => {
-    resetOpts();
-    old.classList.toggle("active");
-    let filterTemples = temples.filter(
-        (temple) => (temple.dedicated.substring(0, 4) < 1900)
-    );
-    displayTemples(filterTemples);
-});
-news.addEventListener("click", () => {
-    resetOpts();
-    news.classList.toggle("active");
-    let filterTemples = temples.filter(
-        (temple) => (temple.dedicated.substring(0, 4) > 2000)
-    );
-    displayTemples(filterTemples);
-});
 
-small.addEventListener("click", () => {
-    resetOpts();
-    small.classList.toggle("active");
-    let filterTemples = temples.filter((temple) => (temple.area < 10000));
-    displayTemples(filterTemples);
+// Footer information
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYear = new Date().getFullYear();
+    const lastModified = document.lastModified;
+    const copyrightYearElement = document.getElementById('currentyear');
+    const lastModifiedElement = document.getElementById('lastModified');
+    copyrightYearElement.textContent = currentYear;
+    lastModifiedElement.textContent = `Last update: ${lastModified}`;
 });
-
-large.addEventListener("click", () => {
-    resetOpts();
-    large.classList.toggle("active");
-    let filterTemples = temples.filter((temple) => (temple.area > 90000));
-    displayTemples(filterTemples);
-});
-
-function displayTemples(filterTemples) {
-    templesElement.innerHTML = ``;
-    console.table(temples);
-    filterTemples.forEach((temple) => {
-        // Create an HTML <article> element (createElement).
-        let article = document.createElement("article");
-        // Create an HTML <h3> element and add the temple's templeName property to this new element.
-        let title = document.createElement("h3");
-        title.innerHTML = temple["templeName"];
-        // Create an HTML <img> element and add the temple's imageUrl property to the src attribute and the temple's location property to the alt attribute.
-        let image = document.createElement("img");
-        image.setAttribute("src", temple["imageUrl"]);
-        image.setAttribute("alt", temple["location"]);
-        image.setAttribute("loading", "lazy");
-        // create a location <h4> and add the temples location property to it
-        let location = document.createElement("h5");
-        location.innerHTML = `LOCATION: ${temple["location"]}`;
-        // create a <h4> and add dedicated property to it
-        let dedication = document.createElement("h5");
-        dedication.innerHTML = `DEDICATED ON: ${temple["dedicated"]}`;
-        // create <h4> and add a size property
-        let size = document.createElement("h5");
-        size.innerHTML = `SIZE: ${temple["area"]}sqft`;
-        // Append the <h3> element and the <img> element to the <article> element as children. (appendChild
-        article.appendChild(title);
-        article.appendChild(location);
-        article.appendChild(dedication);
-        article.appendChild(size);
-        article.appendChild(image);
-        // Append the <article> element to the global templesElement variable declared in Step 2.
-        templesElement.appendChild(article);
-    });
-}
